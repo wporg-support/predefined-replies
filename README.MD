@@ -1,5 +1,7 @@
 # WordPress.org Predefined replies
 
+[📓 Install "Predefined Replies" UserScript](https://github.com/wporg-support/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js)
+
 ## About this project
 
 This is a userscript, used with TamperMonkey, GreaseMonkey, or equivalent, to provide support volunteers with a quick and easy way to supply recurring answers to users.
