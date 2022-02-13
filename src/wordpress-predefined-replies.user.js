@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         WordPress.org Predefined Replies
-// @namespace    https:/wordpress.org/
+// @namespace    https://wordpress.org/
 // @version      0.2
 // @description  Add saved replies to topic reply forms.
 // @author       Scott Kingsley Clark, Clorith
