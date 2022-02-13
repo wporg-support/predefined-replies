@@ -22,5 +22,21 @@
 	"wporg-6": {
 		"label": "Hacked?",
 		"content": "Carefully follow <a href=\"https://wordpress.org/support/article/faq-my-site-was-hacked/\">this guide</a>. When you're done, you may want to implement some (if not all) of <a href=\"https://wordpress.org/support/article/hardening-wordpress/\">the recommended security measures</a> and <a href=\"https://wordpress.org/support/article/wordpress-backups/\">start backing up your site</a>."
+	},
+	"wporg-7": {
+		"label": "Asking for Admin Access",
+		"content": "Please don't do that: when you offer to get admin access and/or FTP access then you're really going too far and that's not cool.\n\nIf you are given admin credentials, you are potentially liable for any potential damage that maybe caused, not only by yourself but anyone accessing the system. Even if you do not provide warranty with your own product.\n\nUnless you're willing to take responsibility for that user's installation from now on (and they should NOT let you do that) then please do not ask or suggest that someone provide you those admin or FTP details.\n\nYou can provide assistance here, ask for log data, you can make recommendations and even suggest changes. But do not seek admin or FTP access. That's just going too far."
+	},
+	"wporg-8": {
+		"label": "Requesting Support for a Commercial Product",
+		"content": "If you use a commercial theme or plugin and need support, please go to their official support channel. In order to be good stewards of the WordPress community, and encourage innovation and progress, we feel it's important to direct people to those official locations.\n\n[product support URL, if easily found]\n\nForum volunteers are also not given access to commercial products, so they would not know why your commercial theme or plugin is not working properly. This is one other reason why volunteers forward you to the commercial product's vendors. The vendors are responsible for supporting their commercial product."
+	},
+	"wporg-9": {
+		"label": "Non-English Support Request",
+		"content": "I'm sorry, that didn't translate well, and it looks like no one has replied so far. I recommend trying at [forum from <a href=\"https://make.wordpress.org/support/handbook/contributing-to-the-wordpress-forums/support-forums-in-your-language/\">the official list</a>] instead."
+	},
+	"wporg-10": {
+		"label": "Offering to Pay/Hire",
+		"content": "Please try https://jobs.wordpress.net/ or https://jetpack.pro/ and do not accept any hire offers posted to these forums.n\n\nThis topic will be closed as per the <a href=\"https://wordpress.org/support/guidelines/#do-not-offer-to-pay-for-help\">Forum Rules</a>."
 	}
 }
