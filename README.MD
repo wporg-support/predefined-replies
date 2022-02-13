@@ -2,6 +2,8 @@
 
 [📓 Install "Predefined Replies" UserScript](https://github.com/wporg-support/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js)
 
+![Forum post reply box with pre-defined answer options added](https://user-images.githubusercontent.com/468735/153733598-48e97671-6707-4d8a-ab24-425673fb2890.png)
+
 ## About this project
 
 This is a userscript, used with TamperMonkey, GreaseMonkey, or equivalent, to provide support volunteers with a quick and easy way to supply recurring answers to users.
