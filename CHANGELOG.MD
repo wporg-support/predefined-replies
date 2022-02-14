@@ -1,5 +1,8 @@
 # Changelog and history
 
+## Version 0.2.1 (2022-02-14)
+- Fixed a bug where fetching pre-defined replies required a page reload to become available.
+
 ## Version 0.2 (2022-02-13)
 - Added support for differentiating pre-defined replies based on what locale is used (no need ot mix languages).
 - Don't let a personal pre-defined reply be added without adding a label first.
