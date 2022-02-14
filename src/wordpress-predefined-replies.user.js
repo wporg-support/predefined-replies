@@ -6,8 +6,8 @@
 // @author       Scott Kingsley Clark, Clorith
 // @match        https://wordpress.org/support/topic/*
 // @match        https://*.wordpress.org/support/topic/*
-// @updateURL    https://github.com/wporg-support/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js
-// @downloadURL  https://github.com/wporg-support/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js
+// @updateURL    https://github.com/fierevere/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js
+// @downloadURL  https://github.com/fierevere/predefined-replies/raw/main/src/wordpress-predefined-replies.user.js
 // @grant        GM_setValue
 // @grant        GM_getValue
 // ==/UserScript==
@@ -140,7 +140,7 @@ const afterEditorAlternatives = () => {
     } );
 
     fetcher.addEventListener( 'click', () => {
-        const replyBaseUrl = 'https://raw.githubusercontent.com/wporg-support/predefined-replies/main/src/replies/',
+        const replyBaseUrl = 'https://raw.githubusercontent.com/fierevere/predefined-replies/main/src/replies/',
           requester = new XMLHttpRequest();
 
         let subdomain = window.location.hostname.split( '.' )[0],
