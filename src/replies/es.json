@@ -1,0 +1,54 @@
+{
+	"wporg-1": {
+		"label": "No se puede acceder al escritorio",
+		"content": "Intenta <a href=\"https://wordpress.org/support/article/faq-troubleshooting/#how-to-deactivate-all-plugins-when-not-able-to-access-the-administrative-menus\">desactivar tus plugins manualmente</a> (no se necesita acceso al escritorio). Si eso resuelve el problema, reactiva cada plugin individualmente hasta encontrar el causante.\n\nSi eso no resuelve el problema, accede a tu tervidor por <a href=\"https://wordpress.org/support/article/ftp-clients/\">SFTP o FTP</a> o mediante el gestor de archivos del panel de control de tu cuenta de alojamiento, navega hasta `/wp-content/themes/` y renombra el directorio de tu tema activo actualmente. Esto forzará que se active el tema por defecto de WordPress y, con suerte, eliminará algún problema específico con el tema (las funciones de los temas pueden interferir igual que los plugins)."
+	},
+	"wporg-2": {
+		"label": "Error relacionado con un conflicto con un plugin o tema",
+		"content": "Puede ser un conflicto con un plugin o tema. Por favor, intenta desactivar todos los plugins y usa uno de los temas por defecto (Twenty*). Si desaparece el problema, activa los plugin uno por uno para identificar el que lo ha originado.\n\nSi puedes instalar plugins, instala y activa el plugin «Health Check»: <a href=\"https://es.wordpress.org/plugins/health-check/\">https://es.wordpress.org/plugins/health-check/</a>.\nAñadirá algunas características adicionales al menú «Herramientas &gt; Salud del sitio».\nEn su pestaña «Diagnóstico», puedes activar el modo de diagnóstico. Esto desactivará todos los plugins, cambiará a un tema estándar de WordPress (si está disponible), te permitirá activar y desactivar tus plugins y cambiar de temas <strong>sin que afecte a los visitantes de tu sitio</strong>. Esto te permite probar varios problemas de compatibilidad.\nHay una descripción más detallada sobre cómo usar el plugin «Health Check» y su modo de diagnóstico en <a href=\"https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/\">https://make.wordpress.org/support/handbook/appendix/troubleshooting-using-the-health-check/</a>."
+	},
+	"wporg-3": {
+		"label": "Error relacionado con archivos del núcleo faltantes o dañados",
+		"content": "Intenta <a href=\"https://es.wordpress.org/download/\">descargar WordPress</a> de nuevo, accede a tu servidor por <a href=\"https://wordpress.org/support/article/ftp-clients/\">SFTP o FTP</a> o mediante el gestor de archivos del panel de control de tu cuenta de alojamiento y borra y reemplaza tus copias de todo con las copias descargadas, <strong>excepto</strong> el archivo `wp-config.php` y el directorio `/wp-content/`. Esto reemplazará de forma efectiva todos tus archivos del núcleo sin dañar tus contenidos ni tus ajustes.\n\nAlgunos sistemas de subida de archivos tienden a ser poco fiables al sobrescribir los archivos, así que no olvides borrar los archivos originales antes de reemplazarlos."
+	},
+	"wporg-4": {
+		"label": "Errores de falta de memoria",
+		"content": "Si estás viendo este error, ya sea repentinamente (sin hacer ninguna tarea que pueda haberlo causado) o frecuentemente, intenta desactivar todos los plugins para eliminar algún problema con un plugin específico y prueba a cambiar de tema para eliminar algún problema con un tema específico.\n\nPor otro lado, aquí tienes tres formas de aumentar la asignación de memoria de PHP:\n\n1. Si puedes editar o sobrescribir el archivo `php.ini` del sistema, aumenta el límite de memoria. Por ejemplo, `memory_limit = 128M`.\n\n2. Si no puedes editar o sobrescribir el archivo `php.ini` del sistema, añade `php_value memory_limit 128M` a tu archivo `.htaccess`.\n\n3. Si nada de eso funciona, es el momento de pedirle a tu proveedor de alojamiento que aumente temporalmente en tu cuenta el límite de asignación de memoria de PHP.\n\n(En los ejemplos anteriores, el límite está establecido en 128 MB)."
+	},
+	"wporg-5": {
+		"label": "Error 500: Internal server error",
+		"content": "Los errores internos del servidor (error 500) suelen ser causados por conflictos con las funciones de plugins o temas, por lo que, si tienes acceso a tu panel de administración, intenta desactivar todos los plugins. Si no tienes acceso a tu panel de control, intenta <a href=\"https://wordpress.org/support/article/faq-troubleshooting/#how-to-deactivate-all-plugins-when-not-able-to-access-the-administrative-menus\">desactivar manualmente tus plugins</a> (no se necesita acceso al escritorio). Si eso resuelve el problema, reactiva cada plugin individualmente hasta encontrar el causante.\n\nSi eso no resuelve el problema, prueba a cambiar al tema por defecto de tu versión de WordPress para eliminar algún problema específico con el tema. Si no tienes acceso a tu panel de administración, accede a tu servidor por <a href=\"https://wordpress.org/support/article/ftp-clients/\">SFTP o FTP</a> o mediante el gestor de archivos del panel de control de tu cuenta de alojamiento, navega hasta `/wp-content/themes/` y renombra el directorio de tu tema activo actualmente. Esto forzará que se active el tema por defecto de WordPress y, con suerte, eliminará algún problema específico con el tema.\n\nSi eso no resuelve el problema, es posible que alguna regla del archivo `.htaccess` pueda ser el origen del problema. Para comprobarlo, accede a tu servidor por SFTP o FTP o mediante el gestor de archivos del panel de control de tu cuenta de alojamiento y renombra el archivo `.htaccess`. Si no puedes encontrar el archivo `.htaccess`, asegúrate de que has configurado tu cliente SFTP o FTP para poder ver los archivos invisibles.\n\nSi no has podido resolver el problema desactivando tus plugins y tu tema o renombrando tu archivo `.htaccess`, puede que podamos ayudarte, pero necesitaremos un mensaje de error más detallado. Los errores internos del servidor suelen estar descritos con más detalle en el registro de errores del servidor. Si tienes acceso al registro de errores de tu servidor, vuelve a generar el error, apunta la fecha y la hora y, después, comprueba inmediatamente el registro de errores de tu servidor para ver cualquier error que haya ocurrido durante ese período de tiempo. Si no tienes acceso al registro de errores de tu servidor, pídele a tu proveedor de alojamiento que lo mire por ti."
+	},
+	"wporg-6": {
+		"label": "¿Hackeado?",
+		"content": "Sigue cuidadosamente <a href=\"https://wordpress.org/support/article/faq-my-site-was-hacked/\">esta guía</a>. Cuando hayas terminado, puede que quieras implementar alguna (si no todas) de <a href=\"https://wordpress.org/support/article/hardening-wordpress/\">las medidas de seguridad recomendadas</a> y <a href=\"https://wordpress.org/support/article/wordpress-backups/\">empezar a hacer copias de seguridad de tu sitio</a>."
+	},
+	"wporg-7": {
+		"label": "Se pide acceso como administrador",
+		"content": "Por favor, no lo hagas: Cuando ofreces o pides acceso como administrador y/o acceso por FTP, realmente estás yendo demasiado lejos y eso no está bien.\n\nSi estás dando credenciales de administrador, eres potencialmente responsable de cualquier daño que se pueda causar, no solo por ti mismo, sino por cualquiera que acceda al sistema. Incluso si no proporcionas garantía con tu propio producto. Salvo que estés dispuesto a asumir la responsabilidad sobre la instalación de ese usuario a partir de ahora (y NO debería dejarte hacerlo), por favor, no pidas ni sugieras que alguien te proporcione esos datos de administración o de FTP.\n\nAquí puedes proporcionar ayuda, pedir datos de registros, hacer recomendaciones e incluso sugerir cambios. Pero no busques acceso como administrador o por FTP. Simplemente, eso es ir demasiado lejos."
+	},
+	"wporg-8": {
+		"label": "Se pide soporte para un producto comercial",
+		"content": "Si usas un tema o plugin comercial y necesitas soporte, por favor, dirígete a su canal oficial de soporte. Para una buena gestión de la comunidad WordPress y fomentar la innovación y el progreso, creemos que es importante dirigir a la gente a los sitios oficiales.\n\n[URL del soporte del producto, si se encuentra fácilmente]\n\nLos voluntarios del foro tampoco tienen acceso a los productos comerciales, por lo que no van a saber por qué tu tema o plugin comercial no funciona correctamente. Esta es otra de las razones por las que los voluntarios te remiten a los vendedores de los productos comerciales. Los vendedores son responsables de dar soporte a su producto comercial."
+	},
+	"wporg-9": {
+		"label": "Se ofrece un pago/contratación",
+		"content": "Por favor, prueba en https://jobs.wordpress.net/ o https://jetpack.pro/ y no aceptes ninguna oferta de contratación publicada en estos foros.n\n\nEste debate se cerrará debido a las <a href=\"https://es.wordpress.org/support/instrucciones/#no-ofrezcas-pago-por-ayuda\">reglas del foro</a>."
+	},
+    "wporg-10": {
+		"label": "Consulta sobre wordpress.com",
+		"content": "<strong>Avisar al moderador para que cierre la consulta</strong>.\n\nDebido a las diferencias entre los blogs alojados en wordpress.com y la versión completa instalable y que puedes alojar donde quieras, es decir, la de WordPress.org, que es a la que se da soporte aquí, deberías preguntar al equipo de soporte de WordPress.com (http://en.support.wordpress.com/contact/) o en sus foros (https://es.support.wordpress.com/).\n\nTambién puedes contactar con ellos en help@wordpress.com o consultarles en su cuenta de Twitter @wordpressdotcom."
+	},
+    "wporg-11": {
+		"label": "Consulta sobre volver a una versión anterior de WP",
+		"content": "A menos que no tengas una copia de seguridad que puedas restaurar, volver a una versión anterior es un proceso peligroso, de ahí que hacer copia de seguridad antes de actualizar sea una recomendación importante, tanto en las instrucciones de actualización como en la interfaz de actualización automática.\n\nSería mejor solucionar el problema que estés teniendo. ¿Podrías describir qué es lo que va mal?"
+	},
+    "wporg-12": {
+		"label": "Pregunta en el foro incorrecto",
+		"content": "<strong>Avisar al moderador para que cierre la consulta</strong>.\n\nTe recomiendo que hagas la pregunta en (aquí la URL del foro adecuado a la consulta) para que los usuarios de ese foro puedan ayudarte con tu problema."
+	},
+    "wporg-13": {
+		"label": "Pregunta sobre hosting",
+		"content": "<strong>Avisar al moderador para que cierre la consulta</strong>.\n\nEstas consultas se suelen cerrar debido a la cantidad de spam que atraen. Mejor haz una búsqueda de proveedores de alojamiento en tu buscador favorito."
+	}
+}
