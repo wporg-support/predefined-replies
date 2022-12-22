@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WordPress.org Predefined Replies
 // @namespace    https://wordpress.org/
-// @version      0.2.1
+// @version      0.2
 // @description  Add saved replies to topic reply forms.
 // @author       Scott Kingsley Clark, Clorith
 // @match        https://wordpress.org/support/topic/*
@@ -16,7 +16,9 @@
 
 let postFormArea = document.getElementById( 'new-post' ),
 	firstTimeSetupComplete = false,
-	postContentArea;
+	postContentArea,
+	isBlockEditor = document.getElementById( 'new-post' ).getElementsByClassName( 'block-editor' ).length > 0,
+	newBlock;
 
 // If no post-form exists, stop this script.
 if ( postFormArea.length < 1 ) {
@@ -60,10 +62,16 @@ const preDefinedArea = () => {
 	remover.prepend( document.createTextNode( '➖ Remove' ) );
 
 	inserter.addEventListener( 'click', () => {
-		const predefSelector = document.getElementById( 'predefined-selector' ),
-			  editorContent = document.getElementById( 'bbp_reply_content' );
+		const predefSelector = document.getElementById( 'predefined-selector' );
+		let editorContent = document.getElementById( 'bbp_reply_content' );
 
-		editorContent.value = editorContent.value + predefSelector.value;
+		if ( ! isBlockEditor ) {
+			editorContent.value = editorContent.value + predefSelector.value;
+		} else {
+			newBlock = wp.blocks.parse( predefSelector.value );
+			// TODO: Figure out why the dispatch inserter is not inserting 🤔
+			wp.data.dispatch( 'core/block-editor' ).insertBlocks( newBlock );
+		}
 	} );
 	remover.addEventListener( 'click', () => {
 		const selector = document.getElementById( 'predefined-selector' );
@@ -123,14 +131,17 @@ const afterEditorAlternatives = () => {
 	} );
 
 	adder.addEventListener( 'click', () => {
-		const label = document.getElementById( 'predef-adder-label' ).value,
-			  editorContent = document.getElementById( 'bbp_reply_content' ).value;
+		const label = document.getElementById( 'predef-adder-label' ).value;
 
 		let localPredefs = GM_getValue( 'predefined-replies-local' + getLocaleSuffix(), {} ),
 			newEntry = {};
 
 		newEntry.label = label;
-		newEntry.content = editorContent;
+		if ( isBlockEditor ) {
+			newEntry.content = document.getElementById( 'bbp_reply_content' ).value;
+		} else {
+			newEntry.content = wp.data.select( 'core/editor' ).getEditedPostContent();
+		}
 
 		localPredefs[ Date.now() ] = newEntry;
 
