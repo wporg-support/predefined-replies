@@ -68,7 +68,7 @@ const preDefinedArea = () => {
 		if ( ! isBlockEditor ) {
 			editorContent.value = editorContent.value + predefSelector.value;
 		} else {
-			newBlock = wp.blocks.parse( predefSelector.value );
+			newBlock = wp.blocks.rawHandler( { HTML: predefSelector.value } );
 			// TODO: Figure out why the dispatch inserter is not inserting 🤔
 			wp.data.dispatch( 'core/block-editor' ).insertBlocks( newBlock );
 		}
